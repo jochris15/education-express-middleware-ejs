@@ -111,10 +111,12 @@
                                             class="bg-orange-400 border-2 border-black px-3 py-1 text-black font-bold text-sm hover:translate-x-1 hover:translate-y-1 transition-transform duration-200">
                                             EDIT
                                         </a>
-                                        <a href="/games/delete/<%= game.id %>"
-                                            class="bg-orange-400 border-2 border-black px-3 py-1 text-black font-bold text-sm hover:translate-x-1 hover:translate-y-1 transition-transform duration-200">
-                                            DELETE
-                                        </a>
+                                        <form action="/games/delete/<%= game.id %>" method="DELETE">
+                                            <button
+                                                class="bg-orange-400 border-2 border-black px-3 py-1 text-black font-bold text-sm hover:translate-x-1 hover:translate-y-1 transition-transform duration-200">
+                                                DELETE
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
