@@ -9,7 +9,7 @@ router.get('/', Controller.read)
 router.get('/add', Controller.addForm)
 router.post('/add', Controller.add)
 router.get('/edit/:id', Controller.editForm)
-router.put('/edit/:id', Controller.edit)
+router.post('/edit/:id', Controller.edit)
 router.get('/delete/:id', Controller.delete)
 
 // detail endpoint put at the end to avoid conflict with other routes

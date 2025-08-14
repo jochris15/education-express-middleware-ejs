@@ -40,7 +40,7 @@ class Controller {
             const { name, gameImg, releaseDate, developer, genre } = req.body;
 
             await Model.add(name, gameImg, releaseDate, developer, genre);
-            res.redirect("/");
+            res.redirect("/games");
         } catch (error) {
             console.log(error);
             res.send(error)
@@ -65,7 +65,7 @@ class Controller {
             const { name, gameImg, releaseDate, developer, genre } = req.body;
 
             await Model.edit(id, name, gameImg, releaseDate, developer, genre);
-            res.redirect(`/games/${id}`);
+            res.redirect(`/games`);
         } catch (error) {
             console.log(error);
             res.send(error)
@@ -77,7 +77,7 @@ class Controller {
             const { id } = req.params;
 
             await Model.delete(id);
-            res.redirect("/");
+            res.redirect("/games");
         } catch (error) {
             console.log(error);
             res.send(error)

@@ -82,5 +82,5 @@ Table Games
 | GET    | /games/add        | Menampilkan form untuk menambahkan data `Game`                         |
 | POST   | /games/add        | Menambahkan data `Game` ke dalam database                              |
 | GET    | /games/edit/:id   | Menampilkan form untuk mengedit data `Game` berdasarkan `id`           |
-| PUT   | /games/edit/:id   | Mengupdate data `Game` berdasarkan `id` yang diberikan                 |
-| DELETE | /games/delete/:id | Menghapus data `Game` berdasarkan `id` yang diberikan                  |
+| POST   | /games/edit/:id   | Mengupdate data `Game` berdasarkan `id` yang diberikan                 |
+| GET    | /games/delete/:id | Menghapus data `Game` berdasarkan `id` yang diberikan                  |
