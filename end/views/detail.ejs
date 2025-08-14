@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME COLLECTION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .neo-shadow {
+            box-shadow: 8px 8px 0px #000000;
+        }
+
+        .neo-shadow-small {
+            box-shadow: 4px 4px 0px #000000;
+        }
+    </style>
+</head>
+
+<body class="bg-yellow-300 min-h-screen p-6 max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="flex justify-between items-center bg-white border-4 border-black neo-shadow mb-8 p-6">
+        <h1 class="text-4xl font-bold text-black mb-2">GAMES COLLECTION</h1>
+        <a href="/games/add"
+            class="inline-block bg-green-400 border-4 border-black neo-shadow-small px-6 py-3 text-black font-bold text-lg hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200">
+            + ADD NEW GAME
+        </a>
+    </div>
+
+    <!-- Game Detail -->
+    <div class="flex flex-col justify-center bg-white border-4 border-black neo-shadow">
+        <!-- Game Header -->
+        <div class="bg-purple-400 border-b-4 border-black p-6">
+            <h2 class="text-3xl font-bold text-black">
+                <%= game.name %>
+            </h2>
+        </div>
+
+        <!-- Game Content -->
+        <div class="p-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Game Image -->
+                <div class="space-y-6">
+                    <div class="bg-pink-200 border-4 border-black p-4 h-full">
+                        <h3 class="text-xl font-bold text-black mb-4">GAME ARTWORK</h3>
+                        <div class="bg-gray-100 border-2 border-black p-2">
+                            <img src="<%= game.gameImg %>" alt="<%= game.name %>"
+                                class="w-full h-64 object-cover border-2 border-black bg-gray-200">
+                        </div>
+
+                        <!-- Back Button -->
+                        <div class="mt-9">
+                            <a href="/games"
+                                class="inline-block bg-gray-400 border-4 border-black neo-shadow-small px-6 py-3 text-black font-bold text-lg hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200">
+                                ← BACK TO GAMES
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Information -->
+                <div class="space-y-6">
+                    <!-- Basic Info -->
+                    <div class="bg-blue-200 border-4 border-black p-4">
+                        <h3 class="text-xl font-bold text-black mb-4">BASIC INFO</h3>
+                        <div class="space-y-3">
+                            <div class="bg-white border-2 border-black p-3">
+                                <span class="font-bold text-black">GAME TITLE:</span>
+                                <p class="text-lg text-black mt-1">
+                                    <%= game.name %>
+                                </p>
+                            </div>
+                            <div class="bg-white border-2 border-black p-3">
+                                <span class="font-bold text-black">RELEASE DATE:</span>
+                                <p class="text-lg text-black mt-1">
+                                    <%= game.formattedReleaseDate %>
+                                </p>
+                            </div>
+                            <div class="bg-white border-2 border-black p-3">
+                                <span class="font-bold text-black">DEVELOPER:</span>
+                                <p class="text-lg text-black mt-1">
+                                    <%= game.developer %>
+                                </p>
+                            </div>
+                            <div class="bg-white border-2 border-black p-3">
+                                <span class="font-bold text-black">GENRE:</span>
+                                <div class="mt-2">
+                                    <span
+                                        class="bg-cyan-300 border-2 border-black px-4 py-2 text-black font-bold text-lg inline-block">
+                                        <%= game.genre %>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 text-center">
+        <div class="bg-black text-white border-4 border-black neo-shadow p-4">
+            <p class="font-bold">Demo for Express,EJS and Middleware</p>
+        </div>
+    </div>
+</body>
+
+</html>

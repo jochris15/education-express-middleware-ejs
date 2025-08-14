@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME COLLECTION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .neo-shadow {
+            box-shadow: 8px 8px 0px #000000;
+        }
+
+        .neo-shadow-small {
+            box-shadow: 4px 4px 0px #000000;
+        }
+    </style>
+</head>
+
+<body class="bg-yellow-300 min-h-screen p-6 max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="flex justify-between items-center bg-white border-4 border-black neo-shadow mb-8 p-6">
+        <h1 class="text-4xl font-bold text-black mb-2">GAMES COLLECTION</h1>
+        <a href="/games/add"
+            class="inline-block bg-green-400 border-4 border-black neo-shadow-small px-6 py-3 text-black font-bold text-lg hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200">
+            + ADD NEW GAME
+        </a>
+    </div>
+
+    <!-- Add Game Form -->
+    <div class="bg-white border-4 border-black neo-shadow">
+        <!-- Form Header -->
+        <div class="bg-green-400 border-b-4 border-black p-6">
+            <h2 class="text-3xl font-bold text-black">ADD NEW GAME</h2>
+        </div>
+
+        <!-- Form Content -->
+        <div class="p-8">
+            <form action="/games/add" method="POST" class="space-y-6">
+                <!-- Game Name -->
+                <div class="bg-pink-200 border-4 border-black p-6">
+                    <label for="name" class="block text-xl font-bold text-black mb-4">GAME NAME</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full p-4 text-lg font-bold text-black bg-white border-4 border-black focus:outline-none focus:ring-0 focus:border-black"
+                        placeholder="Enter game name...">
+                </div>
+
+                <!-- Game Image URL -->
+                <div class="bg-blue-200 border-4 border-black p-6">
+                    <label for="gameImg" class="block text-xl font-bold text-black mb-4">GAME IMAGE URL</label>
+                    <input type="url" id="gameImg" name="gameImg" required
+                        class="w-full p-4 text-lg font-bold text-black bg-white border-4 border-black focus:outline-none focus:ring-0 focus:border-black"
+                        placeholder="https://example.com/game-image.jpg">
+                </div>
+
+                <!-- Release Date -->
+                <div class="bg-purple-200 border-4 border-black p-6">
+                    <label for="releaseDate" class="block text-xl font-bold text-black mb-4">RELEASE
+                        DATE</label>
+                    <input type="date" id="releaseDate" name="releaseDate" required
+                        class="w-full p-4 text-lg font-bold text-black bg-white border-4 border-black focus:outline-none focus:ring-0 focus:border-black">
+                </div>
+
+                <!-- Developer -->
+                <div class="bg-orange-200 border-4 border-black p-6">
+                    <label for="developer" class="block text-xl font-bold text-black mb-4">DEVELOPER</label>
+                    <input type="text" id="developer" name="developer" required
+                        class="w-full p-4 text-lg font-bold text-black bg-white border-4 border-black focus:outline-none focus:ring-0 focus:border-black"
+                        placeholder="Enter developer name...">
+                </div>
+
+                <!-- Genre -->
+                <div class="bg-cyan-200 border-4 border-black p-6">
+                    <label for="genre" class="block text-xl font-bold text-black mb-4">GENRE</label>
+                    <input type="text" id="genre" name="genre" required
+                        class="w-full p-4 text-lg font-bold text-black bg-white border-4 border-black focus:outline-none focus:ring-0 focus:border-black"
+                        placeholder="e.g., Action RPG, Adventure, Strategy...">
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="flex space-x-4 pt-6">
+                    <button type="submit"
+                        class="bg-green-400 border-4 border-black neo-shadow px-8 py-4 text-black font-bold text-xl hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200">
+                        ADD GAME
+                    </button>
+
+                    <a href="/games"
+                        class="inline-block bg-red-400 border-4 border-black neo-shadow px-8 py-4 text-black font-bold text-xl hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200">
+                        CANCEL
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 text-center">
+        <div class="bg-black text-white border-4 border-black neo-shadow p-4">
+            <p class="font-bold">Demo for Express,EJS and Middleware</p>
+        </div>
+    </div>
+</body>
+
+</html>
